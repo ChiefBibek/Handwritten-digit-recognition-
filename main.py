@@ -31,7 +31,7 @@ def predict():
 
     # Make prediction
     prediction = model.predict(img)
-    predicted_class = np.argmax(prediction, axis=1)[0]
+    predicted_class = np.argmax(prediction, axis=1)
 
     return jsonify({'predicted_class': int(predicted_class)})
 

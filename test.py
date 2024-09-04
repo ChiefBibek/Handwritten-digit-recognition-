@@ -3,7 +3,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.datasets import mnist
 
 # Load your Keras model
-model_path = 'my_model.keras'  # Replace with the actual path to your model file
+model_path = 'my_model.keras' 
 model = load_model(model_path)
 
 # Load MNIST dataset
