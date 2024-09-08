@@ -13,7 +13,7 @@ def preprocess_image(image):
     image = Image.open(image).convert('L')  # Convert to grayscale
     image = image.resize((28, 28))  # Resize to 28x28
     image = np.array(image).astype('float32')  # Convert to NumPy array
-    image = image.reshape(1, 28, 28)  # Reshape to (1, 28, 28, 1)
+    image = image.reshape(1, 28, 28,1)  # Reshape to (1, 28, 28, 1)
     image = image / 255.0  # Normalize pixel values to [0, 1]
     return image
 
