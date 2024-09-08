@@ -2,3 +2,4 @@ streamlit
 tensorflow
 Pillow  # For image processing
 numpy
+matplotlib
