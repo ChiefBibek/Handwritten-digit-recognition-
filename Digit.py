@@ -5,7 +5,7 @@ from PIL import Image, ImageOps
 import matplotlib.pyplot as plt
 
 # Load the trained model
-model = load_model('my_model.keras')
+model = load_model('CNN_model.keras')
 
 # Image preprocessing function
 def preprocess_image(image):
@@ -13,7 +13,7 @@ def preprocess_image(image):
     image = Image.open(image).convert('L')  # Convert to grayscale
     image = image.resize((28, 28))  # Resize to 28x28
     image = np.array(image).astype('float32')  # Convert to NumPy array
-    image = image.reshape(1, 28, 28,1)  # Reshape to (1, 28, 28, 1)
+    image = image.reshape(1, 28, 28, 1)  # Reshape to (1, 28, 28, 1)
     image = image / 255.0  # Normalize pixel values to [0, 1]
     return image
 
@@ -60,7 +60,7 @@ if st.button('Recognize the selected image'):
         st.success(f'The digit in the image is: {img_pred}')
 
         # Display the processed image using matplotlib
-        plt.imshow(img_for_prediction.reshape(28, 28), cmap='gray')
+        plt.imshow(img_for_prediction[0])
         st.pyplot(plt)
         
         # Debugging output
