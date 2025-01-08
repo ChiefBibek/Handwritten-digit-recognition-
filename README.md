@@ -1,3 +1,6 @@
+# cam.py
+
+
 """
 This script captures video from the webcam, detects a central region of interest (ROI), and uses a pre-trained 
 Convolutional Neural Network (CNN) model to recognize handwritten digits within that ROI in real-time.
@@ -71,10 +74,50 @@ This output indicates that the model is 98.7% confident that the digit in the ce
 This script demonstrates the practical application of a CNN model for real-time handwritten digit recognition using a webcam. By leveraging the power of deep learning, it provides an accurate and efficient solution for digit recognition tasks.
 """
 
-# Handwritten-digit-recognition-using Neural Network
-https://digitbibek.streamlit.app/
+# streamlit digit recognition app
+Script : digit.py
 
+"""
+link :https://digitbibek.streamlit.app/
+"""
+
+This script is a Streamlit application for handwritten digit recognition. It allows users to either select an image from a preset dataset or upload their own image for recognition. The application uses a pre-trained model to predict the digit in the selected or uploaded image.
+
+Functions:
+- preprocess_image(image_path): Preprocesses the image for prediction.
+- model.predict(img_for_prediction): Predicts the digit in the preprocessed image.
+
+Components:
+- Title and description: Displays the title of the application.
+- Subheader and selection: Asks the user whether they want to use a preset dataset or upload their own image.
+- Radio button for decision: Allows the user to choose between using a preset dataset or uploading their own image.
+- Logic based on the user's decision: Handles the user's choice and displays the appropriate options.
+    - If 'Preset dataset' is selected: Displays radio buttons for selecting an image from the preset dataset and shows the selected image.
+    - If 'Upload your own image' is selected: Provides a file uploader for the user to upload an image and shows the uploaded image.
+- Button for recognizing the selected image: When clicked, it processes the selected or uploaded image, predicts the digit, and displays the result along with the processed image and prediction probabilities.
+
+Dependencies:
+- Streamlit (st)
+- Matplotlib (plt)
+- NumPy (np)
+- Pre-trained model for digit recognition
+
+Note:
+- Ensure that the 'img dataset/' folder contains the preset images named "0.png" to "9.png".
+- The preprocess_image function and the pre-trained model should be defined elsewhere in the code.
+"""
+
+
+
+# Pre-trained Models
+#### CNN Model
 CNN_model.keras is the model file which is trained using the MNIST dataset. The model is trained using the CNN model and the accuracy of the model is 99.2%. The model is saved in the keras format.
 
-
+#### Simple Neural Network Model
 my_model.keras is the model file which is trained using the MNIST dataset. The model is trained using the Neural Network model and the accuracy of the model is 98.9%.
+
+# Demo Video
+
+To see the application in action, check out the demo video below:
+
+[![Handwritten Digit Recognition Demo](media1.mp4)](media1.mp4)
