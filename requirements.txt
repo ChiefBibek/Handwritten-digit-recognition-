@@ -3,3 +3,7 @@ tensorflow
 Pillow  # For image processing
 numpy
 matplotlib
+scikit-learn  # For machine learning algorithms
+pandas  # For data manipulation and analysis
+opencv-python  # For computer vision tasks
+seaborn  # For statistical data visualization
