@@ -120,4 +120,4 @@ my_model.keras is the model file which is trained using the MNIST dataset. The m
 
 To see the application in action, check out the demo video below:
 
-[![Handwritten Digit Recognition Demo](media1.mp4)](media1.mp4)
+[![Handwritten Digit Recognition Demo](https://youtu.be/w5hlC74CAaI)](https://youtu.be/w5hlC74CAaI)
